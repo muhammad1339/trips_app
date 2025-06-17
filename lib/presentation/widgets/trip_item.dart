@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trips_app/core/ui/app_colors.dart';
 
 class TripItem extends StatelessWidget {
   const TripItem({super.key});
@@ -7,25 +8,14 @@ class TripItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(16.0),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(8.0),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
-            spreadRadius: 2,
-            blurRadius: 5,
-            offset: const Offset(0, 3), // changes position of shadow
-          ),
-        ],
+      decoration: ShapeDecoration(
+        color: AppColors.color_171717,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        shadows: [BoxShadow(color: Color(0x19000000), blurRadius: 4, offset: Offset(0, 0), spreadRadius: 0)],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text('Trip Title'),
-          const SizedBox(height: 8.0),
-          Text('Trip description goes here. It can be a brief overview of the trip.'),
-        ],
+        children: [Text('Trip Title'), const SizedBox(height: 8.0), Text('Trip description goes here. It can be a brief overview of the trip.')],
       ),
     );
   }

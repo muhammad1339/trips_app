@@ -14,4 +14,6 @@ class AppIcons {
   static const String plus = 'assets/icons/plus.svg';
   // settings.svg
   static const String settings = 'assets/icons/settings.svg';
+  // menu.svg
+  static const String menu = 'assets/icons/menu.svg';
 }
