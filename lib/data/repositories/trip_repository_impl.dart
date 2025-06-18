@@ -12,6 +12,7 @@ class TripRepositoryImpl extends TripRepository {
     // read the trips from json file from assets/data/trips_mock.json
     final String jsonString = await rootBundle.loadString('assets/data/trips_mock.json');
     final TripModel tripModel = TripModel.fromJson(jsonString);
+    await Future.delayed(const Duration(seconds: 5)); // simulate network delay
     // return a list of Trip objects
     if (tripModel.trips != null) {
       return tripModel.trips;

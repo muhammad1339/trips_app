@@ -7,6 +7,7 @@ class AppColors {
   // static const error = 0xFFB00020; // Red
   // static const textPrimary = 0xFF000000; // Black
   // static const textSecondary = 0xFF757575; // Grey
-  static const color_484848 = Color(0xFF484848); // Grey
-  static const color_171717 = Color(0xFF171717); // Grey
+  static const color_484848 = Color(0xFF484848);
+  static const color_171717 = Color(0xFF171717);
+  static const color_999999 = Color(0xFF999999);
 }

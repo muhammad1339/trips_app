@@ -1,6 +1,8 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:trips_app/core/ui/app_colors.dart';
 import 'package:trips_app/core/ui/app_icons.dart';
 
 class AppHeader extends StatelessWidget {
@@ -21,9 +23,15 @@ class AppHeader extends StatelessWidget {
           12.horizontalSpace,
           SvgPicture.asset(AppIcons.bell),
           12.horizontalSpace,
-          Container(height: 22.h, width: 1.r, color: Color(0xFF484848)),
+          Container(height: 22.h, width: 1.r, color: AppColors.color_484848),
           12.horizontalSpace,
-          CircleAvatar(radius: 32.r),
+          Container(
+            clipBehavior: Clip.antiAlias,
+            width: 32.r,
+            height: 32.r,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(16.r)),
+            child: CachedNetworkImage(imageUrl: "https://randomuser.me/api/portraits/men/96.jpg"),
+          ),
         ],
       ),
     );
