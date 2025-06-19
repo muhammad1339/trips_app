@@ -16,14 +16,27 @@ class ListHeader extends StatelessWidget {
         children: [
           Text(
             'Items',
-            style: TextStyle(fontFamily: AppResources.fontFamily, fontSize: 24.sp, fontWeight: FontWeight.w400, color: Colors.white),
+            style: TextStyle(
+              fontFamily: AppResources.fontFamily,
+              fontSize: 24.sp,
+              fontWeight: FontWeight.w400,
+              color: Colors.white,
+            ),
           ),
           Spacer(),
           Container(
             width: 40.r,
             height: 40.r,
-            decoration: BoxDecoration(color: AppColors.color_171717, borderRadius: BorderRadius.circular(20.r)),
-            child: SvgPicture.asset(AppIcons.sliders, width: 24.r, height: 24.r, fit: BoxFit.scaleDown),
+            decoration: BoxDecoration(
+              color: AppColors.color_171717,
+              borderRadius: BorderRadius.circular(20.r),
+            ),
+            child: SvgPicture.asset(
+              AppIcons.sliders,
+              width: 24.r,
+              height: 24.r,
+              fit: BoxFit.scaleDown,
+            ),
           ),
         ],
       ),
